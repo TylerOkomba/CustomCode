@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Okomba's Football Apparel </title>
+<link rel="stylesheet" type="text/css" href="FootballStyles.css">
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <script>
+ $(document).ready(function(){
+		
+		
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var myCleats = JSON.parse(this.responseText);
+
+		
+			//Loop through the JSON object and create elements
+			for (var i=0; i < myCleats.length; i++) {
+			
+				var div = $('<div id="cleatholder' + i + '" class="item"></div>');
+				div.appendTo('#cleatholder');
+				
+				var img = $('<img class="cleatImg">'); //Equivalent: $(document.createElement('img'))
+				img.attr('src', "assets/" + myCleats[i].image);
+				 
+				 var Cleat = "<p>" + myCleats[i].name + "</p>"; 
+				 var Price = "<p>" + myCleats[i].price + "</p>";
+				 var Color = "<p>" + myCleats[i].color + "</p>";   //Jquery Create Element using HTML
+				 
+
+				 
+				$(div).append(Cleat,Price,Color,img);  //jquery version of appendTo
+
+				//mySelect.appendChild(new Option(myMovies[i].name,i));
+			}
+		
+		
+		}
+	};
+		xmlhttp.open("GET", "cleatInfo.json", true);
+		xmlhttp.send();
+
+var myItems = JSON.parse(JSON.stringify(myCleats));
+var mySelect = document.getElementById("cleat");
+for (var i=0; i < myItems.length; i++) {
+mySelect.appendChild(new Option(myItems[i].name,i));
+}
+$("#cleat").change(function(){
+var cleatval = $(this).val ();
+if (cleatval != "none"){ var cleatdescription = myItems[cleatval].price+ ' ' + myItems[cleatval].name + ' ' +myItems[cleatval].color;
+$("#pricediv").text(cleatdescription);
+}
+else {
+$("#pricediv").text("");
+
+}
+});
+
+
+		
+	  });
+
+ var myCleats = [
+{ "name": "Untouchable Pro 3",
+	"price": "$170.00",
+	"color": "Black"
+},
+{ "name": "Vapor Elite",
+	"price": "$150.00",
+	"color": "White"
+},
+{ "name": "Untouchable Speed 3",
+	"price": "$125.00",
+	"color": "Blue"
+},
+{ "name": "Jordan XI ",
+	"price": "$99.00",
+	"color": "Red"
+},
+{ "name": "Vapor Untouchable 3",
+	"price": "$200.00",
+	"color": "White/Gold"
+},
+{ "name": "Vapor Untouchable 3 By You",
+	"price": "$140.00",
+	"color": "Red/Blue/Gold"
+},
+{ "name": "Force Savage Elite",
+	"price": "$140.00",
+	"color": "Black/White"
+},
+{ "name": "Force Savage Shark",
+	"price": "$50.97",
+	"color": "Black"
+},
+{ "name": "Alpha Menace Pro Mid",
+	"price": "$74.97",
+	"color": "Black/White",
+},
+{ "name": "Vapor Untouchable 3 Pro",
+	"price": "$200.00",
+	"color": "White/Gold",
+},
+{ "name": "Vapor Untouchable 3 Speed",
+	"price": "$95.00",
+	"color": "Black",
+}
+
+]
+
+
+</script>
+
+</head>
+<style>
+#cleatholder{
+	width:100%;
+	height:auto;
+	overflow: scroll;
+	background-color: transparent;
+
+}
+
+.item{
+	color:black;
+	height: 300px;
+	width: 300px;
+	border:none;
+	float:left;
+	margin: 30px;
+	font-family: 'Fjalla One', sans-serif;
+	font-size:14px;
+
+}
+
+#cleatdiv{
+	width:80%;
+	height:auto;
+	float:left;
+}
+
+#pricediv{
+	width:20%;
+	float:right;
+	background-color: white;
+	margin-top: 30px;
+	margin-right: 200px;
+}
+
+#cleat{
+	margin: 30px;
+}
+</style>
+<body>
+<div id="wrapper">
+<header>
+<a href="index.html">
+<div id="logo">
+<img src="assets/FootballLogo12.png">
+</div>
+</a>
+<nav>
+<a href="cart.html"> <i class="material-icons" style="position: absolute; top:30px; right: 50px;"> shopping_cart </i>  </a>
+</nav>
+</header>
+<div id="products">
+ <!-- serves as the side navigation -->
+<div id="categories">
+<p style="font-size: 20px; color:white; margin-bottom: 40px;"> Category </p>
+<a href="cleats.html"> <button class="categorybutton"> Cleats </button> </a><br>
+<button class="categorybutton"style="color: black;"> Gloves </button> <br>
+<button class="categorybutton"style="color: black;"> Leggings </button> <br>
+<button class="categorybutton"style="color: black;"> Arm Sleeves </button> <br>
+<button class="categorybutton"style="color: black;">  Protective </button> <br>
+<button class="categorybutton"style="color: black;">  Helmets</button> <br>
+<button class="categorybutton"style="color: black;">  Visors </button> <br>
+</div>
+<select name="cleat" id="cleat"> 
+<option value="none" selected="selected" style="margin: 30px; font-family:font-family: 'Fjalla One', sans-serif; "> Pick a cleat </option>
+</select>
+<div id="pricediv" style="font-family: 'Fjalla One', sans-serif;">
+</div>
+<div id="colordiv" style="font-family: 'Fjalla One', sans-serif;">
+</div>
+<div id="cleatdiv">
+<div id="cleatholder">
+
+</div>
+</div>
+</div>
+</body>
+</html>

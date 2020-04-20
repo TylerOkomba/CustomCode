@@ -1,0 +1,52 @@
+[
+{ "name": "Alpha Menace Elite",
+	"price": "$179.97",
+	"color": "Black",
+	"image": "cleat7.png"
+},
+{ "name": "Vapor Untouchable 3",
+	"price": "$150.00",
+	"color": "Black",
+	"image": "cleat1.png"
+},
+{ "name": "Jordan XI Retro TD",
+	"price": "$99.97",
+	"color": "Black/Red",
+	"image": "cleat4.png"
+},
+{ "name": "Vapor Untouchable 3",
+	"price": "$200.00",
+	"color": "White/Gold",
+	"image": "cleat5.png"
+},
+{ "name": "Vapor Untouchable 3 By You",
+	"price": "$140.00",
+	"color": "Red/Blue/Gold",
+	"image": "cleat6.png"
+},
+{ "name": "Force Savage Elite",
+	"price": "$140.00",
+	"color": "Black/White",
+	"image": "cleat8.png"
+},
+{ "name": "Force Savage Shark",
+	"price": "$50.97",
+	"color": "Black",
+	"image": "cleat9.png"
+},
+{ "name": "Alpha Menace Pro Mid",
+	"price": "$74.97",
+	"color": "Black/White",
+	"image": "cleat10.png"
+},
+{ "name": "Vapor Untouchable 3 Pro",
+	"price": "$200.00",
+	"color": "White/Gold",
+	"image": "cleat2.png"
+},
+{ "name": "Vapor Untouchable 3 Speed",
+	"price": "$95.00",
+	"color": "Black",
+	"image": "cleat3.png"
+}
+]

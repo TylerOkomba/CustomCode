@@ -1,0 +1,57 @@
+<html>
+<body>
+
+<h2>Our Cleats</h2>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script>
+ $(document).ready(function(){ 
+		
+		
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var myCleats = JSON.parse(this.responseText);
+
+		
+			//Loop through the JSON object and create elements
+			for (var i=0; i < myCleats.length; i++) {
+			
+				var div = $('<div id="holder"' + i + '" class="item"></div>');
+				div.appendTo('#holder');
+				
+				var img = $('<img class="cleatImg">'); //Equivalent: $(document.createElement('img'))
+				img.attr('src', "assets/" + myCleats[i].image);
+				
+				 var Cleat = "<p>" + myCleats[i].name + "</p>"; 
+				 var Price = "<p>" + myCleats[i].price + "</p>";
+				 var Color = "<p>" + myCleats[i].color + "</p>";   //Jquery Create Element using HTML
+				 
+
+				 
+				$(div).append(Cleat,Price,Color,img);  //jquery version of appendTo
+
+				//mySelect.appendChild(new Option(myMovies[i].name,i));
+			}
+		
+		
+		}
+	};
+		xmlhttp.open("GET", "cleatInfo.json", true);
+		xmlhttp.send();
+
+
+		
+	  });
+</script>
+
+<div id="holder">
+</div>
+
+
+<p>My JSON file -- <a href="cleatInfo.json" target="_blank">cleatInfo.json</a></p>
+
+</body>
+</html>
+
