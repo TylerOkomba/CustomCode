@@ -1,0 +1,200 @@
+
+
+
+*{
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    width:100%;
+    margin:none;
+}
+
+html{
+    width: 100%;
+    margin: none;
+}
+
+#wrapper{
+	width:100%;
+    margin:none;
+	height:auto;
+	background-color:white;
+	display: flex;
+	justify-content: space-around;
+}
+
+#device{
+	height: auto;
+	width: auto;
+	margin-top: 150px;
+	position: absolute;
+}
+
+#home{
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 27%;
+	left: 5%;
+}
+
+#schedule{
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 27%;
+	left: 20%;
+}
+
+#calendar{
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 47%;
+	left: 5%;
+}
+
+#settings{
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 47%;
+	left: 20%;
+}
+
+#power{
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 12%;
+	left: 5%;
+}
+
+
+#settingsscreen, #calendarscreen, #schedulescreen, #homescreen, #alertscreen{
+	width:451px;
+	height: 331px;
+	background-color: #d3d3d3;
+	border:solid 1px;
+	border-radius: 13px;
+	position: absolute;
+	top:12%;
+	left:34%;
+	overflow: hidden;
+}
+
+#complete{
+	width:301px;
+	height: 78px;
+	background-color: white;
+	border:solid 1px;
+	border-radius: 13px;
+	position: absolute;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 15px;
+	top:81%;
+	left:44%;
+}
+
+.time{
+	width:100%;
+	height: auto;
+	font-size: 40px;
+	text-align: center;
+	color: white;
+}
+
+.date{
+	width:100%;
+	height: auto;
+	font-size: 25px;
+	text-align: center;
+	margin-top: 2px;
+	
+}
+
+.upcomingnotifications{
+	width:100%;
+	height: auto;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.header{
+	width: 100%;
+	height: auto;
+	background-color: #76BED0;
+	margin-top: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.title{
+	width: 100%;
+	height: auto;
+	font-size: 30px;
+}
+
+.alert{
+	width: 80%;
+	height: 190px;
+	background-color: #FFFFFF;
+	margin-left: 45px;
+	margin-top: 10px;
+	border: solid 1px;
+	border-color: transparent;
+	border-radius:30px;
+	overflow: hidden;
+}
+
+#alertname{
+	width:auto;
+	height: auto;
+	float:left;
+	font-size: 20px;
+	margin-left: 15px;
+	margin-top: 10px;
+	font-weight: bold;
+
+}
+
+#line{
+	width: 100%;
+	float: left;
+	margin-bottom: 0px;
+}
+
+#info{
+	width: 100%;
+	height: auto;
+	float: left;
+	padding-left: 15px;
+}
+
+#bigtext{
+	width: 100%;
+	height: 250px;
+	float: left;
+	padding-left: 15px;
+	padding-top: 10px;
+	font-size: 30px;
+	background-color: white;
+}
+
+#scrollbox{
+	height: 200px;
+	width: 95%;
+	background-color: white;
+	overflow: scroll;
+	padding-bottom: 15px;
+	padding-left: 10px;
+}
+
+
+
+
+
